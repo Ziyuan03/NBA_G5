@@ -15,6 +15,9 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Stack;
 import java.util.Vector;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -34,6 +37,22 @@ public class InjuryPlayer extends javax.swing.JFrame {
         initComponents();
     }
     
+    public class ImageFrame extends JFrame {
+        public ImageFrame() {  
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            setSize(963, 897);
+            setLocationRelativeTo(null); // Center the frame
+           
+            ImageIcon imageIcon = new ImageIcon(getClass().getResource("Untitled (1).png"));
+            
+            JLabel label = new JLabel(imageIcon);
+           
+            getContentPane().add(label);
+          
+            setVisible(true);
+        }
+    }
+        
     Connection Con = null;
     PreparedStatement pst = null;
     ResultSet Rs = null;
